@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+
+        android:id="@+id/myScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:background="#ffffffff">
+
+            <TextView
+                android:id="@+id/tv_bac_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-light"
+                android:gravity="center"
+                android:text="@string/blood_alcohol_concentration_ncalculator"
+                android:textColor="#ff020202"
+                android:textSize="27sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_bac_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bac_name"
+                android:gravity="center"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:text="@string/bac_level_shown_here_is_just_for_informative_purpose_and_not_a_legal_advice_legal_permitted_bac_level_varies_from_country_to_country_according_to_the_law_imposed_by_the_current_government_n_nenter_details_and_press_submit_to_get_your_bac_level"
+                android:textColor="#ff020202"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_bac_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_bac_details"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/weight"
+                android:textColor="#ff020202"
+                android:textSize="30sp" />
+
+            <EditText
+                android:layout_marginStart="32dp"
+                android:id="@+id/et_bac_weight"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_below="@+id/tv_bac_details"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="70dp"
+                android:layout_toEndOf="@+id/tv_bac_weight"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/eg_80"
+                android:inputType="numberDecimal|numberSigned"
+                android:textColor="#ff020202" />
+
+            <RadioGroup
+                android:layout_marginTop="16dp"
+                android:id="@+id/rg_bac_weight"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bac_weight"
+                android:layout_marginStart="20dp"
+                android:fontFamily="sans-serif-light"
+                android:textColor="#ff020202">
+
+                <RadioButton
+                    android:id="@+id/rb_bac_kg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/kg"
+                    android:textColor="#ff020202"
+                    android:textSize="15sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_bac_pounds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/pounds"
+                    android:textColor="#ff020202"
+                    android:textSize="15sp" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/rg_bac_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rg_bac_weight"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-light"
+                android:orientation="horizontal"
+                android:textColor="#ff020202">
+
+                <RadioButton
+                    android:id="@+id/rb_bac_male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/male"
+                    android:textColor="#ff020202"
+                    android:textSize="30sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_bac_female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-light"
+                    android:text="@string/female"
+                    android:textColor="#ff020202"
+                    android:textSize="30sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_bac_hourselapsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rg_bac_gender"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/hours_elapsed_since_drinking"
+                android:textColor="#ff020202"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/et_bac_hours"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bac_hourselapsed"
+                android:layout_marginStart="30dp"
+                android:fontFamily="sans-serif-light"
+                android:hint="@string/_0"
+                android:inputType="numberDecimal|numberSigned"
+                android:textColor="#ff020202" />
+
+            <TextView
+                android:id="@+id/tv_bac_drinks_consumed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/et_bac_hours"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/drinks_consumed"
+                android:textColor="#ff020202"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/tv_bac_beer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_bac_drinks_consumed"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/beer"
+                android:textColor="#ff020202"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_marginStart="32dp"
+                android:id="@+id/et_bac_beer"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bac_drinks_consumed"
+                android:layout_toEndOf="@+id/tv_bac_beer"
+                android:fontFamily="sans-serif-light"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="@string/_0"
+                android:textColor="#ff020202" />
+
+            <TextView
+
+                android:id="@+id/tv_bac_spirit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_bac_beer"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/spirit"
+                android:textColor="#ff020202"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_marginStart="32dp"
+                android:id="@+id/et_bac_spirit"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bac_beer"
+                android:layout_toEndOf="@+id/tv_bac_beer"
+                android:fontFamily="sans-serif-light"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="@string/_0"
+                android:textColor="#ff020202" />
+
+            <TextView
+                android:id="@+id/tv_bac_wine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_bac_spirit"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/wine"
+                android:textColor="#ff020202"
+                android:textSize="20sp" />
+
+            <EditText
+                android:layout_marginStart="32dp"
+                android:id="@+id/et_bac_wine"
+                android:layout_width="80dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_bac_spirit"
+                android:layout_toEndOf="@+id/tv_bac_beer"
+                android:fontFamily="sans-serif-light"
+                android:inputType="numberDecimal|numberSigned"
+                android:text="@string/_0"
+                android:textColor="#ff020202" />
+
+            <Button
+                android:id="@+id/bt_bac_submit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_bac_wine"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/blue_button"
+                android:fontFamily="sans-serif-light"
+                android:text="@string/submit"
+                android:textColor="#ffffff"
+                android:textSize="25sp" />
+            <!--            <Button-->
+            <!--                android:layout_width="match_parent"-->
+            <!--                android:layout_height="120dp"-->
+            <!--                android:layout_below="@+id/et_bac_wine" />-->
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</ScrollView>
